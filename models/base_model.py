@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 """
 BaseModel file"""
+import uuid
 from datetime import datetime
+from sqlalchemy import Column, String, DateTime
+from sqlalchemy.ext.declarative import declarative_base
 import models
-from uuid import uuid4
+
+Base = declarative_base()
 
 
 class BaseModel:

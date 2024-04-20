@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""the Amenity class."""
-from models.base_model import BaseModel
+""" State Module for HBNB project """
+from models.base_model import BaseModel, Base
+from sqlalchemy import Column, String
 
 
-class Amenity(BaseModel):
-    """Amenity Class inherratce from BaseModel.
+class Amenity(BaseModel, Base):
+    '''The class for Amenity'''
+    __tablename__ = 'amenities'
 
-    Attributes:
-        name : The name of the amenity.
-    """
-
-    name = ""
+    name = Column(String(128), nullable=False)
